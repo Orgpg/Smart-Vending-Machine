@@ -66,7 +66,7 @@ public class VendingMachineApp {
 
     // Metadata for receipt
     private static final String MACHINE_ID = "VM-102";
-    private static final String LOCATION   = "Cafeteria Building A";
+    private static final String LOCATION   = "Building 209, Time City Complex";
 
     public static void main(String[] args) {
         new VendingMachineApp().run();
@@ -226,9 +226,8 @@ public class VendingMachineApp {
         String txnId = genTxnId();
         String date = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MMM-uuuu"));
         String time = LocalTime.now().format(DateTimeFormatter.ofPattern("h:mm a"));
-
         System.out.println("\n---------------------------------------");
-        System.out.println("      University Vending Machine");
+        System.out.println("      Gusto Vending Machine");
         System.out.println("      Machine ID: " + MACHINE_ID);
         System.out.println("      Location: " + LOCATION);
         System.out.println("---------------------------------------");
@@ -273,9 +272,20 @@ public class VendingMachineApp {
         System.out.println("(Type item number to add, C=Checkout, Q=Quit)");
     }
 
-    private void printlnHeader() {
-        System.out.println("Welcome to Smart Vending Machine");
+private void printlnHeader() {
+    // Use dividers for better visual separation
+        System.out.println("-------------------------------------");
+
+        // Center the main title and use capital letters for emphasis
+        System.out.println("** Wellcome to GUSTO COLLEGE VENDING MACHINE **");
+        
+        // Use dividers for better visual separation
+        System.out.println("------------------------------------------------------------------");
+        
+        // Display the warning message clearly with an icon
         System.out.println("Cash Payment Only | Type 'CANCEL' during payment to abort");
+        
+        System.out.println("------------------------------------------------------------------");
     }
 
     private void seedInventory() {

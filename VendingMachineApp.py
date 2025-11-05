@@ -36,7 +36,7 @@ class Cart:
 
 class VendingMachine:
     MACHINE_ID = "VM-102"
-    LOCATION   = "Cafeteria Building A"
+    LOCATION   = "Building 209, Time City Complex"
 
     def __init__(self):
         self.inventory: "OrderedDict[int, Item]" = OrderedDict()
@@ -81,7 +81,9 @@ class VendingMachine:
 
     # ---------- Main Loop ----------
     def run(self):
-        print("Welcome to Smart Vending Machine")
+        print("-------------------------------------------")
+        
+        print("** Welcome to Gusto College Vending Machine **")
         print("Cash Payment Only | Type 'CANCEL' during payment to abort")
 
         while True:
@@ -190,7 +192,7 @@ class VendingMachine:
         time_str = now.strftime("%I:%M %p").lstrip("0")
 
         print("\n---------------------------------------")
-        print("      University Vending Machine")
+        print("      GUSTO College Vending Machine")
         print(f"      Machine ID: {self.MACHINE_ID}")
         print(f"      Location: {self.LOCATION}")
         print("---------------------------------------")
