@@ -125,9 +125,13 @@ public class VendingMachineApp {
             cart.add(item, qty);
             System.out.printf("Added to cart: %s x%d (%,d Ks each)%n", item.name, qty, item.price);
 
-            System.out.print("Add more items? (Y to continue adding, anything else to return menu): ");
+           System.out.print("Add more items? (Y to continue adding, anything else to return menu): ");
             String more = in.nextLine().trim();
-            // loop back to menu regardless; user can press C to checkout
+            if (!more.equalsIgnoreCase("Y")) {
+                // return to main menu
+                continue;
+            }
+
         }
     }
 
